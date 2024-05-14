@@ -36,32 +36,44 @@
         <h2>Mains</h2>
         <ul>
             <% menu.forEach((dish, index)=> { %>
-                <% if (dish.category==='mains' ) { %>
+                <% if (dish.category==='mains' && dish.rating === 5 ) { %>
                     <li>Try Our: <%= dish.name %>
                     </li>
-                    <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %>  Stars</p>
-                    <% } %>
+                    <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %>  ⭐</p>
+                    <% } else if(dish.category==='mains') { %>
+                        <li>Try Our: <%= dish.name %>
+                        </li>
+                        <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %> Stars</p>
+                        <% } %>
                     <% }); %>
         </ul>    
         
         <h2>Sides</h2>
         <ul>
             <% menu.forEach((dish, index)=> { %>
-                <% if (dish.category==='sides' ) { %>
+                <% if (dish.category==='sides' && dish.rating === 5 ) { %>
                     <li>Try Our: <%= dish.name %>
                     </li>
-                    <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %>  Stars</p>
-                    <% } %>
+                    <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %>  ⭐</p>
+                    <% } else if(dish.category==='sides') { %>
+                        <li>Try Our: <%= dish.name %>
+                        </li>
+                        <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %> Stars</p>
+                        <% } %>
                     <% }); %>
         </ul>
         <h2>Desserts</h2>
         <ul>
             <% menu.forEach((dish, index)=> { %>
-                <% if (dish.category==='desserts' ) { %>
+                <% if (dish.category==='desserts' && dish.rating === 5 ) { %>
                     <li>Try Our: <%= dish.name %>
                     </li>
-                    <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %>  Stars</p>
-                    <% } %>
+                    <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %>  ⭐</p>
+                    <% } else if(dish.category==='desserts') { %>
+                        <li>Try Our: <%= dish.name %>
+                        </li>
+                        <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %> Stars</p>
+                        <% } %>
                     <% }); %>
         </ul>
     </body>

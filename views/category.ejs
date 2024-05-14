@@ -12,12 +12,16 @@
         <h1><%=category[0].toUpperCase() + category.substring(1)%></h1>
         <ul>
             <% filtedMenu.forEach(dish => { %>
+         <% if (dish.rating === 5 ) { %>
+            <li>Try Our: <%= dish.name %>
+            </li>
+            <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %>  ⭐</p>
+            <% } else { %>
                 <li>Try Our: <%= dish.name %>
                 </li>
-                <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %>  Stars</p>
-
-
-         <%   }) %>
+                <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %> Stars</p>
+                <% } %>
+            <% }); %>
         </ul>
     </body>
 
