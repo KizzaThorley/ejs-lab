@@ -1,0 +1,69 @@
+<%- include('./partials/nav') %>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu</title>
+    </head>
+
+    <body>
+        <h1>Full Menu</h1>
+        <!-- <ul>
+            <% menu.forEach((dish, index)=> { %>
+                <% if (dish.category==='mains' ) { %>
+                    <h2> Mains</h2>
+                    <li>Try Our: <%= dish.name %>
+                    </li>
+                    <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %> Stars</p>
+                    <% } else if (dish.category==='sides' ) {%>
+                        <h2> Sides</h2>
+                        <li>Try Our: <%= dish.name %>
+                        </li>
+                        <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %> Stars
+                        </p>
+                        <% } else if (dish.category==='desserts' ) {%>
+                            <h2> Deserts</h2>
+                            <li>Try Our: <%= dish.name %>
+                            </li>
+                            <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %>
+                                            Stars</p>
+                            <% } %>
+                                <% }); %>
+        <!-- </ul>  -->
+
+        <h2>Mains</h2>
+        <ul>
+            <% menu.forEach((dish, index)=> { %>
+                <% if (dish.category==='mains' ) { %>
+                    <li>Try Our: <%= dish.name %>
+                    </li>
+                    <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %>  Stars</p>
+                    <% } %>
+                    <% }); %>
+        </ul>    
+        
+        <h2>Sides</h2>
+        <ul>
+            <% menu.forEach((dish, index)=> { %>
+                <% if (dish.category==='sides' ) { %>
+                    <li>Try Our: <%= dish.name %>
+                    </li>
+                    <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %>  Stars</p>
+                    <% } %>
+                    <% }); %>
+        </ul>
+        <h2>Desserts</h2>
+        <ul>
+            <% menu.forEach((dish, index)=> { %>
+                <% if (dish.category==='desserts' ) { %>
+                    <li>Try Our: <%= dish.name %>
+                    </li>
+                    <p> Details: <%= dish.details %> Price:<%= dish.price %>$ <br> Rating: <%= dish.rating %>  Stars</p>
+                    <% } %>
+                    <% }); %>
+        </ul>
+    </body>
+
+    </html>
